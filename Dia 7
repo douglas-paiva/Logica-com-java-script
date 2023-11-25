@@ -1,0 +1,64 @@
+função  soma ( valor1 ,  valor2 )  {
+  retornar  Número ( valor1 )  +  Número ( valor2 ) ;
+}
+
+function  subtração ( valor1 ,  valor2 )  {
+  retornar  Número ( valor1 )  -  Número ( valor2 ) ;
+}
+
+function  multiplicação ( valor1 ,  valor2 )  {
+  retornar  Número ( valor1 )  *  Número ( valor2 ) ;
+}
+
+function  divisão ( valor1 ,  valor2 )  {
+  retornar  Número ( valor1 )  /  Número ( valor2 ) ;
+}
+
+deixe  valor1 ;
+deixe  valor2 ;
+deixe  operação  =  "" ;
+
+fazer  {
+  operação  =  prompt (
+    `Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`
+  ) ;
+  enquanto  (
+    operação  !=  "soma"  &&
+    operação  !=  "subtração"  &&
+    operação  !=  "multiplicação"  &&
+    operação  !=  "divisão"  &&
+    operação  !=  "sair"
+  )  {
+    alert ( `Operação não reconhecida!` ) ;
+    operação  =  prompt (
+      `Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`
+    ) ;
+  }
+
+  if  ( operação  ===  "sair" )  {
+    quebrar ;
+  }
+
+  valor1  =  prompt ( `Insira o primeiro valor: ` ) ;
+  valor2  =  prompt ( `Insira o segundo valor: ` ) ;
+  switch  ( operação )  {
+    caso  "soma" :
+      alert ( `O resultado da ${ operação } é ${ soma ( valor1 ,  valor2 ) } ` ) ;
+      quebrar ;
+    caso  "subtração" :
+      alert ( `O resultado da ${ operação } é ${ subtração ( valor1 ,  valor2 ) } ` ) ;
+      quebrar ;
+    caso  "multiplicação" :
+      alert ( `O resultado da ${ operação } é ${ multiplicação ( valor1 ,  valor2 ) } ` ) ;
+      quebrar ;
+    caso  "divisão" :
+      alert ( `O resultado da ${ operação } é ${ divisão ( valor1 ,  valor2 ) } ` ) ;
+      quebrar ;
+  }
+}  enquanto  (
+  operação  ===  "soma"  ||
+  operação  ===  "subtração"  ||
+  operação  ===  "multiplicação"  ||
+  operação  ===  "divisão"
+) ;
+alert ( `Até a próxima!` ) ;
