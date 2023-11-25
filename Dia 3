@@ -1,29 +1,45 @@
-const area = prompt("Você quer seguir para a área de 'Front-End' ou de 'Back-End'? Digite o nome da área:");
-deixe linguagem = "";
-if (área === "Front-End"){
-    linguagem = prompt("Você quer aprender React ou Vue?");
+let disciplina = prompt ("Qual disciplina você deseja cursar? Resposta: 1- Front-End 2-Back-End");
+deixe matéria;
+let especialização = ["React","Vue","C#","Java"];
+seja x = 0;
+deixe resposta=0;
+deixe tecnologia;
+deixe contador;
+
+if (disciplina == 1) {
+materia = prompt ("Qual matéria do Front-End você deseja aprender? Responda: 1-React 2-Vue");
+if(matéria == 1){
+x = 0;
+} else if (matéria == 2){
+x = 1;
+} else {
+alert("Você não digitou uma resposta válida. Por favor, digite 1 ou 2.");
 }
-senão if (área === "Back-End"){
-    linguagem = prompt("Você quer aprender C# ou Java?");
+} else if (disciplina == 2) {
+materia = prompt ("Qual matéria do Back-End você deseja aprender? Resposta: 1-C# 2-Java");
+if(matéria == 1){
+x = 2;
+} else if (matéria ==2){
+x = 3;
+} else {
+alert("Você não digitou uma resposta válida. Por favor, digite 1 ou 2..");
 }
-outro {
-    alert("Você não inseriu uma área válida!");
+} else {
+alert("Você não digitou uma resposta válida.");
 }
 
-const especialidadeOuFullstack = prompt("Digite 1 para seguir se especializando na área escolhida ou 2 para seguir se desenvolvendo para se tornar Fullstack");
-if (especialidadeOuFullstack == 1){
-    alert(`Continue se especializando em ${linguagem} para dominar a área de ${area}!`);
-}
-senão if (especialidadeOuFullstack == 2){
-    alert(`Chegou a hora de começar a aprender outras linguagens além de ${linguagem} se você quer se tornar Fullstack!`);
-}
-outro {
-    alert("Você não inseriu um valor válido!");
+resposta = prompt ( Você prefere se especializar em ${especializacao[x]} ou se tornar um FullStack? Responda: 1 ${especializacao[x]} ou 2-FullStack);
+
+if(resposta == 1){
+alerta( Muito bem! Boa sorte com sua especialização em ${especializacao[x]});
+} else if (resposta == 2){
+alerta( Parabéns! Boa sorte na sua jornada como FullStack!);
+} else{
+alert("Você não digitou uma resposta válida.");
 }
 
-let msg = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo.");
-while (mensagem === "ok"){
-    let novaTecnologia = prompt("Qual?");
-    alert(`${novaTecnologia} é realmente uma tecnologia muito legal!`)
-    msg = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo.");
+while(contador != 0){
+tecnologia = prompt ("Tem mais alguma tecnologia que você gostaria de aprender? Escreva abaixo:");
+alerta( Muito bem! Continue assim! Boa sorte com ${tecnologia});
+contador = prompt ("Tem mais alguma tecnologia? Digite 1- Continuar ou digite 0-Encerrar o programa");
 }
